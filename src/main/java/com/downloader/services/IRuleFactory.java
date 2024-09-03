@@ -5,6 +5,7 @@ import java.util.List;
 public interface IRuleFactory {
     IOutput defaultOutput();
 
-    List<IRuleService> createRuleServices();
+    IRuleEngine createRuleEngine();
 
+    List<IRuleBody> createRuleBodies(IBlock block);
 }
