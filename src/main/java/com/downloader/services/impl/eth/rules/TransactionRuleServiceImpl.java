@@ -22,8 +22,4 @@ public class TransactionRuleServiceImpl extends AbstractBaseRuleService implemen
         String toAddress = ethTransaction.getTo();
     }
 
-    @Override
-    public IRuleBody createRuleBody(IBlock block) {
-        return null;
-    }
 }

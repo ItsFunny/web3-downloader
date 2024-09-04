@@ -14,25 +14,13 @@ public class SimpleRuleEngine implements IRuleEngine {
         this.ruleServices = ruleServices;
     }
 
+    // TODO
     @Override
     public void dispatch(IRuleBody rule, IOutput output) {
         for (IRuleService ruleService : ruleServices) {
-            new RuleEngineWrapper(this, ruleService).handleRule(rule, output);
+            ruleService.setEngine(this);
+            ruleService.handleRule(rule, output);
         }
     }
 
-    public static class RuleEngineWrapper extends AbstractBaseRuleService {
-        private IRuleService internal;
-
-        public RuleEngineWrapper(IRuleEngine engine, IRuleService internal) {
-            super(engine);
-            this.internal = internal;
-        }
-
-        @Override
-        public void handleRule(IRuleBody rule, IOutput output) {
-            this.internal.handleRule(rule, output);
-        }
-
-    }
 }

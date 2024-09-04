@@ -1,10 +1,13 @@
 package com.downloader.services;
 
-// ? merge functions?
 public interface IRuleService {
     void handleRule(IRuleBody rule, IOutput output);
 
+    IRuleEngine getEngine();
+
+    void setEngine(IRuleEngine engine);
+
     default void redispatchRule(IRuleBody rule, IOutput output) {
-        throw new UnsupportedOperationException("Not implemented");
+        this.getEngine().dispatch(rule, output);
     }
 }
