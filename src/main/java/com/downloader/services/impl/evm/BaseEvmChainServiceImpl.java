@@ -1,5 +1,6 @@
 package com.downloader.services.impl.evm;
 
+import com.downloader.services.IRuleEngine;
 import com.downloader.services.IRuleFactory;
 import com.downloader.services.abstranction.BaseChainServiceImpl;
 import com.downloader.wrapper.BlockWrapper;
@@ -18,6 +19,7 @@ public abstract class BaseEvmChainServiceImpl extends BaseChainServiceImpl<Integ
 
     @Override
     public void rollBack(Integer number) {
+        IRuleEngine engine = this.factory.createRuleEngine();
 
     }
 }
