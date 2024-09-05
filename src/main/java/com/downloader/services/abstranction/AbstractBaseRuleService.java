@@ -7,6 +7,8 @@ public abstract class AbstractBaseRuleService implements IRuleService {
 
     private IRuleEngine engine;
 
+    private RuleContext context;
+
     public AbstractBaseRuleService(IRuleEngine engine) {
         this.engine = engine;
     }
@@ -22,5 +24,13 @@ public abstract class AbstractBaseRuleService implements IRuleService {
     @Override
     public void setEngine(IRuleEngine engine) {
         this.engine = engine;
+    }
+
+    public RuleContext getContext() {
+        return context;
+    }
+
+    public void setContext(RuleContext context) {
+        this.context = context;
     }
 }

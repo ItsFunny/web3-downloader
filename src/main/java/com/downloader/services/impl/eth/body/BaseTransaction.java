@@ -1,0 +1,65 @@
+package com.downloader.services.impl.eth.body;
+
+import com.downloader.services.impl.BaseOutputModel;
+import lombok.Data;
+
+@Data
+public class BaseTransaction extends BaseOutputModel {
+    private String blockHash;
+    private Integer blockHeight;
+    private Long blocktime;
+    private Double baseFee;
+    private String baseFeeRaw;
+    private Double burntFee;
+    private String burntFeeRaw;
+    private String contractAddress;
+    private Integer cumulativeGasUsed;
+    private Long effectiveGasPrice;
+    private String effectiveGasPriceRaw;
+    private String errorMessage;
+    private Integer erc20TokenTransferCount;
+    private Integer erc721TokenTransferCount;
+    private Integer erc1155TokenTransferCount;
+    private Double fee;
+    private String feeRaw;
+    private String from;
+    private Long gasPrice;
+    private Long gasLimit;
+    private Integer gasUsed;
+    private Double giveChange;
+    private String hash;
+    private Integer hour;
+    private Boolean hasTip;
+    private Integer index;
+    private String inputHex;
+    private Integer internalTranCount;
+    private Boolean isError;
+    private Boolean isFromContract;
+    private Boolean isToContract;
+    private Double maxFeePreGas;
+    private String maxFeePreGasRaw;
+    private Double maxPriorityFeePreGas;
+    private String maxPriorityFeePreGasRaw;
+    private String methodId;
+    private Integer nonce;
+    private String status;
+    private String to;
+    private Double tip;
+    private Integer type;
+    private Double value;
+    private String valueRaw;
+    private String v;
+    private String r;
+    private String s;
+    private String gasPriceRaw;
+    private Boolean createContract;
+    private String cumulativeGasUsedRaw;
+    private String giveChangeRaw;
+    private String tipRaw;
+    private String inputData;
+    private String txType;
+    private Double l1Fee;
+    private Long l1GasPrice;
+    private Double l1GasUsed;
+    private Double l1FeeScalar;
+}

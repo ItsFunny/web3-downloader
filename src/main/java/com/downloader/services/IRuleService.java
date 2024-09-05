@@ -1,7 +1,9 @@
 package com.downloader.services;
 
 public interface IRuleService {
-    void handleRule(IRuleBody rule, IOutput output);
+    void handleRule(IRuleBody body, IOutput output);
+
+    boolean accept(IRuleBody body);
 
     IRuleEngine getEngine();
 
